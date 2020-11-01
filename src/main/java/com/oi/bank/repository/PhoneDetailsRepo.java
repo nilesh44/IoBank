@@ -16,7 +16,7 @@ public interface PhoneDetailsRepo  extends CrudRepository<PhoneDetails, Integer>
 	
 	
 	@Query("select p from PhoneDetails p where p.customerId= :customerId and p.expiredTimestamp is null")
-	public List<PhoneDetails>findByCustomerId(@Param(value = "customerId") String customerId);
+	public List<PhoneDetails>findByCustomerId(@Param(value = "customerId") int customerId);
 	
 	@Query("select p from PhoneDetails p where p.mobileNumber= :mobileNumber and p.expiredTimestamp is null")
 	public List<PhoneDetails> findByMobileNumber(@Param(value= "mobileNumber") String mobileNumber);

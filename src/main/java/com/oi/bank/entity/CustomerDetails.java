@@ -64,5 +64,6 @@ public class CustomerDetails {
 		.createTimestamp(DataTimeUtility.getSqlTimeStamp(request.getCreateTimestamp()))
 		.build();
 	}
+	
 
 }

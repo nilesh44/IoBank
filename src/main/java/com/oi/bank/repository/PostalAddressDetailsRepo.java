@@ -15,6 +15,6 @@ import com.oi.bank.entity.PostalAddressDetails;
 public interface PostalAddressDetailsRepo extends CrudRepository<PostalAddressDetails, Integer>  {
 	
 	@Query("select pa from PostalAddressDetails pa where pa.customerId= :customerId and pa.expiredTimestamp is null")
-	public List<PostalAddressDetails>findByCustomerId(@Param(value = "customerId") String customerId);
+	public List<PostalAddressDetails>findByCustomerId(@Param(value = "customerId") int customerId);
 	
 }

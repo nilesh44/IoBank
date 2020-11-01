@@ -1,12 +1,9 @@
 package com.oi.bank.vo;
 
 import java.sql.Timestamp;
-import java.util.Date;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-
-import org.apache.commons.lang3.StringUtils;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;

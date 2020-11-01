@@ -15,7 +15,7 @@ import com.oi.bank.entity.EmailDetails;
 public interface EmailDetailsRepo extends CrudRepository<EmailDetails, Integer>  {
 	
 	@Query("select e from EmailDetails e where e.customerId= :customerId and e.expiredTimestamp is null")
-	public List<EmailDetails>findByCustomerId(@Param(value = "customerId") String customerId);
+	public List<EmailDetails>findByCustomerId(@Param(value = "customerId") int customerId);
 	
 	@Query("select e from EmailDetails e where e.emailAddress= :emailAddress and e.expiredTimestamp is null")
 	public List<EmailDetails> findByEmailAddress(@Param(value= "emailAddress") String emailAddress);

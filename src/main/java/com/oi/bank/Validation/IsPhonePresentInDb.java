@@ -11,15 +11,14 @@ import javax.validation.Payload;
 
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = IsEmailPresentValidator.class)
+@Constraint(validatedBy = isPhonePresentValidator.class)
 @Documented
-public @interface IsEmailPresent {
+public @interface IsPhonePresentInDb {
 	
-	   public String message() default "email alrady present";
+	   public String message() default "phone alrady present";
 
 		Class<?>[] groups() default {};
 
 		Class<? extends Payload>[] payload() default {};
-
 
 }

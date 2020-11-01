@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.oi.bank.service.CustomerDetailsService;
 import com.oi.bank.vo.CreateCustomerDetailsRequest;
 import com.oi.bank.vo.CreateCustomerDetailsResponse;
+import com.oi.bank.vo.GetCustomerDetailsRequest;
+import com.oi.bank.vo.GetCustomerDetailsResponse;
 
 
 @RestController
@@ -26,6 +28,12 @@ public class CustomerDetailsController {
 		
 		CreateCustomerDetailsResponse response=customerDetailsService.createCustomer(createCustomerDetailsRequest);
 		return new ResponseEntity<CreateCustomerDetailsResponse>(response,HttpStatus.OK);
+	}
+	
+	@PostMapping(value="get")
+	public ResponseEntity<GetCustomerDetailsResponse> createCustomer(@Valid @RequestBody GetCustomerDetailsRequest getCustomerDetailsRequest) {		
+		GetCustomerDetailsResponse response=customerDetailsService.getCustomer(getCustomerDetailsRequest);
+		return new ResponseEntity<GetCustomerDetailsResponse>(response,HttpStatus.OK);
 	}
 
 }

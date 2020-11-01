@@ -4,13 +4,12 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
 import com.oi.bank.repository.PhoneDetailsRepo;
 
 
-public class isPhonePresentValidator implements ConstraintValidator<IsPhonePresent, String>{
+public class isPhonePresentValidator implements ConstraintValidator<IsPhonePresentInDb, String>{
 	
 	@Autowired
 	private PhoneDetailsRepo phoneDetailsRepo;

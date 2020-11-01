@@ -1,8 +1,7 @@
 package com.oi.bank.vo;
-import javax.validation.constraints.Digits;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.oi.bank.Validation.DateFormate;
 
